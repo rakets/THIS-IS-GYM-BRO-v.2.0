@@ -227,6 +227,74 @@ table {
 }
 /* Group Trainin Tab */
 
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch; 
+}
+
+.card-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 15px;
+    display: flex; 
+    flex-direction: column;
+}
+
+.card-button:hover .card {
+    box-shadow: 0 0 24px rgba(250, 51, 217, 1); 
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card {
+    border: 1.5px solid #3f0f37;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #f194de;
+    overflow: hidden;
+    min-height: 12.5rem;
+    height: 100%; 
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.card-text-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    font-style: normal;
+    margin: 0;
+    padding: 15px; 
+    word-wrap: break-word;
+}
+
+
+.card1 { 
+	background: url("imgProjektc/card1.jpg") -370px; 
+}
+.card2 { 
+	background: url("imgProjektc/card2.jpg") 0 220px; 
+}
+.card3 { 
+	background: url("imgProjektc/hala.webp") 0 250px;
+ }
+.card4 { 
+	background: url("imgProjektc/card4.jpg") 500px -450px; 
+}
+
 @media screen and (min-width: 1400px) {
 
 	/* mobil */
@@ -348,71 +416,11 @@ table {
 
 	/* Sekcja offer */
 
-	.cards {
-		display: flex;
-		justify-content: center;
+	.card { 
+		width: 18rem; 
 	}
-
-	.card-button {
-		border: none;
-		background: none;
-		cursor: pointer;
-		margin: 0 10px;
-	}
-
-	.card-button:hover .card {
-		box-shadow: 0 0 24px rgba(250, 51, 217, 1); 
-		border-radius: 10px;
-		transition: box-shadow 0.3s ease;
-	}
-
-	.card {
-		width: 18rem;
-		border: 1.5px solid #3f0f37;
-		border-radius: 15px;
-
-		box-shadow: 0px 0px 10px #f194de;
-		overflow: hidden;
-
-		height: 12.5rem;
-		position: relative;
-	}
-
-	.card-body {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	.card-text-title {
-		text-align: center;
-		padding: 70px;
-		text-transform: uppercase;
+    .card-text-title { 
 		font-size: 30px;
-		color: #FFF;
-		font-style: normal;
-	}
-
-	.button-card {
-		border-radius: 40px;
-		border: none;
-	}
-
-	.card1 {
-		background: url("imgProjektc/card1.jpg") -370px;
-	}
-
-	.card2 {
-		background: url("imgProjektc/card2.jpg") 0 220px;
-	}
-
-	.card3 {
-		background: url("imgProjektc/hala.webp") 0 250px;
-	}
-
-	.card4 {
-		background: url("imgProjektc/card4.jpg") 500px -450px;
 	}
 
 	/* About us */
@@ -650,21 +658,8 @@ table {
 		text-transform: uppercase;
 	}
 
-	.cards {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.card {
-		width: 15rem;
-		margin: 15px;
-	}
-
-	.card-text-title {
-		font-size: 24px;
-		padding: 60px;
-	}
+	.card { width: 15rem; }
+    .card-text-title { font-size: 24px;}
 
 	#aboutus h3 {
 		font-size: 26px;
@@ -825,71 +820,22 @@ table {
 
 	/* Секция offer */
 
-	.cards {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-
-	.card-button {
-		border: none;
-		background: none;
-		cursor: pointer;
-		margin: 0 10px;
-		display: flex;
-		justify-content: center;
-	}
-
-	.card {
-		width: 70%;
-		margin: 20px;
-
-		border: 1.5px solid #3f0f37;
-		border-radius: 15px;
-		box-shadow: 0px 0px 10px #130410;
-		overflow: hidden;
-		height: 12.5rem;
-		position: relative;
-	}
-
-	.card-body {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	.card-text-title {
-		text-align: center;
-		padding: 50px;
-		/* Уменьшаем внутренние отступы */
-		text-transform: uppercase;
-		font-size: 160%;
-		/* Уменьшаем размер шрифта */
-		color: #FFF;
-		font-style: normal;
-	}
-
-	.button-card {
-		border-radius: 40px;
-		border: none;
-	}
-
-	.card1 {
-		background: url("imgProjektc/card1.jpg") -370px;
-	}
-
-	.card2 {
-		background: url("imgProjektc/card2.jpg") 0 220px;
-	}
-
-	.card3 {
-		background: url("imgProjektc/hala.webp") 0 250px;
-	}
-
-	.card4 {
-		background: url("imgProjektc/card4.jpg") 500px -450px;
-	}
+	.cards { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .card-button { 
+        width: 100%; 
+        display: flex; 
+        justify-content: center; 
+    }
+    .card { 
+        width: 70%; 
+        margin: 0; /* Отступы контролируются кнопкой-оберткой */
+    }
+    .card-text-title { 
+        font-size: 160%; 
+    }
 
 	/* About us */
 
