@@ -53,6 +53,14 @@ function writeLetter(form, event){
     const body = `Hello!\n\n My name is ${nameUser}\n\n ${emailUser}\n\nWith best regards,\n ${nameUser}`;
     const mailtoLink = `mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
+    // cleaning Local Storage after checking 
+    localStorage.removeItem('savedName');
+    localStorage.removeItem('savedEmail');
+    // cleaning entered  data in the form
+    form.name.value = "";
+    form.email.value = "";
+    // -------------------------------------------------------------
+
     window.open(mailtoLink, '_blank');
 }
 
@@ -95,6 +103,24 @@ $(document).ready(function() {
         };
         img.src = currentSrc;
     }
+
+    // checking the local storage when loading the page
+    // if there are saved data, insert it
+    if (localStorage.getItem('savedName')) {
+        $('#userName').val(localStorage.getItem('savedName'));
+    }
+    if (localStorage.getItem('savedEmail')) {
+        $('#userEmail').val(localStorage.getItem('savedEmail'));
+    }
+
+    // entered data tracking and saving every updating
+    $('#userName').on('input', function() {
+        localStorage.setItem('savedName', $(this).val());
+    });
+    
+    $('#userEmail').on('input', function() {
+        localStorage.setItem('savedEmail', $(this).val());
+    });
 
     // start after whole page
     loadImagesSequentially();
