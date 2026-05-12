@@ -68,4 +68,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// jquery for carousel
+$(document).ready(function() {
+
+    const $carouselContainer = $('#carousel-images-container');
+    
+    // img autoloading
+    const folderPath = "./imgProjektc/gallery/"; 
+    const fileExtension = ".jpg";               
+    let imageIndex = 1;                          
+
+    function loadImagesSequentially() {
+        const img = new Image(); 
+        const currentSrc = folderPath + imageIndex + fileExtension; 
+
+        img.onload = function() {
+            const activeClass = (imageIndex === 1) ? 'active' : '';
+            const itemHtml = `
+                <div class="carousel-item ${activeClass}">
+                    <img src="${currentSrc}" class="d-block w-100" alt="Gym gallery image ${imageIndex}">
+                </div>
+            `;
+            $carouselContainer.append(itemHtml);
+            imageIndex++; 
+            loadImagesSequentially(); 
+        };
+        img.src = currentSrc;
+    }
+
+    // start after whole page
+    loadImagesSequentially();
+});
+
 
