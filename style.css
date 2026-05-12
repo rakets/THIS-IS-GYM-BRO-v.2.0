@@ -1104,3 +1104,87 @@ table {
   }
   /* Group Trainin Tab */
 }
+
+/* for conflict between Bootstrap and old styles*/
+a { text-decoration: none; }
+button { text-transform: none; }
+
+/* Karuzel bootstrap styles */
+
+#gallery h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+/* limiting the width of the carousel and centering it*/
+#gymCarousel {
+    max-width: 900px;
+    margin: 0 auto;  
+}
+
+/* Frame and neon glow */
+.carousel-inner {
+    border: 1.5px solid #3f0f37;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #f194de;
+    overflow: hidden;
+    width: 100%; 
+    height: 100%;
+}
+
+/* img size in carousel */
+.carousel-item img {
+    width: 100%;
+    max-width: 100%;  
+    height: 450px;     
+    object-fit: cover; 
+    display: block;    
+}
+
+/* button 'next', 'previous' */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #fa33d9;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-size: 50%;
+    box-shadow: 0 0 10px rgba(250, 51, 217, 0.5);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgb(249, 138, 231);
+    box-shadow: 0 0 20px rgba(250, 51, 217, 1);
+    transform: scale(1.1);
+}
+
+/* shaddow for frame */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* media for mobile */
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        height: 280px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}
